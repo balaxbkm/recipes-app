@@ -1,10 +1,8 @@
-"use client";
-
 import RecipeTiles from "@/components/recipe-tiles";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowBigLeftDashIcon, ArrowRightIcon, CornerDownRightIcon, StarIcon } from "lucide-react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 async function fetchRecipeDetails(id) {
     try {
@@ -17,7 +15,6 @@ async function fetchRecipeDetails(id) {
 }
 
 export default async function RecipeDetails({ params }) {
-    const router = useRouter();
     const recipe = await fetchRecipeDetails(params.id);
 
     return (
@@ -28,9 +25,11 @@ export default async function RecipeDetails({ params }) {
                     <div className="w-full aspect-square relative group">
                         <img className="h-fit object-cover rounded-lg" src={recipe.image} alt={recipe.name} />
                         <div className="text-slate-50 p-6 rounded-lg absolute inset-0 bg-gradient-to-br from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <Button size="icon" className="bg-slate-100 hover:bg-slate-200 rounded-full" title="Back" onClick={() => router.back()}>
-                                <ArrowBigLeftDashIcon className="fill-slate-800 stroke-slate-800" />
-                            </Button>
+                            <Link href={"/recipes"}>
+                                <Button size="icon" className="bg-slate-100 hover:bg-slate-200 rounded-full" title="Back">
+                                    <ArrowBigLeftDashIcon className="fill-slate-800 stroke-slate-800" />
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                     <div className="bg-slate-100 p-3 px-4 text-xs text-slate-600 font-semibold italic rounded-lg">
