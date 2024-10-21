@@ -8,8 +8,8 @@ export default function RecipeTiles({ recipe }) {
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <div className="flex flex-col gap-3 items-center justify-center p-5 bg-slate-100 rounded-lg" >
-                            <Clock4Icon />
-                            <span className="text-xs font-semibold">{recipe.prepTimeMinutes} Min's</span>
+                            <Clock4Icon className="text-red-400" />
+                            <span className="text-xs font-semibold text-slate-600">{recipe.prepTimeMinutes} Min's</span>
                         </div>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -20,8 +20,8 @@ export default function RecipeTiles({ recipe }) {
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <div className="flex flex-col gap-3 items-center justify-center p-5 bg-slate-100 rounded-lg">
-                            <CookingPotIcon />
-                            <span className="text-xs font-semibold">{recipe.cookTimeMinutes} Min's</span>
+                            <CookingPotIcon className="text-red-400" />
+                            <span className="text-xs font-semibold text-slate-600">{recipe.cookTimeMinutes} Min's</span>
                         </div>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -32,8 +32,8 @@ export default function RecipeTiles({ recipe }) {
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <div className="flex flex-col gap-3 items-center justify-center p-5 bg-slate-100 rounded-lg">
-                            <HandPlatterIcon />
-                            <span className="text-xs font-semibold">{recipe.servings} Heads</span>
+                            <HandPlatterIcon className="text-red-400" />
+                            <span className="text-xs font-semibold text-slate-600">{recipe.servings} Heads</span>
                         </div>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -44,8 +44,8 @@ export default function RecipeTiles({ recipe }) {
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <div className="flex flex-col gap-3 items-center justify-center p-5 bg-slate-100 rounded-lg">
-                            <UtensilsIcon />
-                            <span className="text-xs font-semibold">{recipe.difficulty}</span>
+                            <UtensilsIcon className="text-red-400" />
+                            <span className="text-xs font-semibold text-slate-600">{recipe.difficulty}</span>
                         </div>
                     </TooltipTrigger>
                     <TooltipContent>

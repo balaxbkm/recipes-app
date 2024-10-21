@@ -33,8 +33,8 @@ export default async function RecipeDetails({ params }) {
                             </Button>
                         </div>
                     </div>
-                    <div className="bg-slate-100 p-3 px-4 text-xs font-semibold italic rounded-lg">
-                        <span className="text-muted-foreground">Tags: </span>
+                    <div className="bg-slate-100 p-3 px-4 text-xs text-slate-600 font-semibold italic rounded-lg">
+                        <span className="text-red-400">Tags: </span>
                         {recipe.tags.join(", ")}
                     </div>
                 </div>
@@ -67,7 +67,7 @@ export default async function RecipeDetails({ params }) {
                                     recipe.ingredients.map((ingredient, i) => (
                                         <div key={i} className="flex items-center gap-2 mb-3 ml-2">
                                             <div className="w-6">
-                                                <ArrowRightIcon size={14} className="text-blue-500" />
+                                                <ArrowRightIcon size={14} className="text-red-400" />
                                             </div>
                                             <span className="text-sm">{ingredient}</span>
                                         </div>
@@ -87,7 +87,7 @@ export default async function RecipeDetails({ params }) {
                     recipe.instructions.map((instruction, i) => (
                         <div key={i} className="flex items-center gap-2 mb-3 ml-2">
                             <div className="w-6">
-                                <CornerDownRightIcon size={14} className="text-blue-500" />
+                                <CornerDownRightIcon size={14} className="text-red-400" />
                             </div>
                             <span className="text-sm">{instruction}</span>
                         </div>
